@@ -1,12 +1,17 @@
 import { registerRootComponent } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
+
+const { width, height } = Dimensions.get("window");
 
 export default function App(): React.ReactElement {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <View style={styles.circleContainer}>
+
+        <Text>test</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -15,8 +20,16 @@ export default function App(): React.ReactElement {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  circleContainer: {
+    backgroundColor: 'rgba(251, 111, 140, 0.8)',
+    width: width,
+    height: height * 0.62,
+    borderRadius: 32,
+    justifyContent: "center",
+    alignItems: "center",
+  }
 });

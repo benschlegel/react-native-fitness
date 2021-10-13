@@ -8,7 +8,7 @@ import { WorkoutPlanner } from './src/WorkoutPlanner';
 import type { Routes } from './src/Routes';
 import { NavigationContainer } from '@react-navigation/native';
 
-const Stack = createNativeStackNavigator<Routes>();
+export const Stack = createNativeStackNavigator<Routes>();
 
 export default function App(): React.ReactElement {
   // const isOnboarding = useState(false);

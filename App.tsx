@@ -1,10 +1,10 @@
-// import { registerRootComponent } from 'expo';
+import { registerRootComponent } from 'expo';
 // import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Overview } from './Overview';
-import { Onboarding } from './Onboarding';
-import type { Routes } from './Routes';
+import { Overview } from './src/Overview';
+import { Onboarding } from './src/Onboarding';
+import type { Routes } from './src/Routes';
 import { NavigationContainer } from '@react-navigation/native';
 
 const Stack = createNativeStackNavigator<Routes>();

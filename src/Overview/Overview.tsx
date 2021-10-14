@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import { Dimensions, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Stack } from '../../App';
 import type { Routes, StackNavigationProps } from '../Routes';
 
 const { width } = Dimensions.get('window');

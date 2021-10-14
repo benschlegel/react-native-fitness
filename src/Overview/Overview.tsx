@@ -1,5 +1,5 @@
-import React from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import React, { useCallback } from 'react';
+import { Dimensions, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Stack } from '../../App';
 
@@ -7,12 +7,16 @@ const { width } = Dimensions.get('window');
 const BUTTON_HEIGHT = 55;
 
 const Overview = (): React.ReactElement => {
+  const navigateToPlanner = useCallback(() => {
+    console.log('navigateToPlanner');
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
+    <SafeAreaView style={styles.container}>
+      <TouchableOpacity style={styles.button} onPress={navigateToPlanner}>
         <Text style={{ color: '#4D6174' }}>Click me!</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 

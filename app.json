@@ -25,6 +25,9 @@
         "backgroundColor": "#FFFFFF"
       }
     },
+    "androidNavigationBar": {
+      "backgroundColor": "#E5E9F0"
+    },
     "web": {
       "favicon": "./assets/favicon.png"
     }

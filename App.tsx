@@ -2,6 +2,7 @@
 import React from 'react';
 import { Overview } from './src/Overview';
 import { WorkoutPlanner } from './src/WorkoutPlanner';
+import { Camera } from './src/Camera';
 import type { Routes } from './src/Routes';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -24,6 +25,8 @@ export default function App(): React.ReactElement {
               iconName = focused ? 'fitness-outline' : 'fitness';
             } else if (route.name === 'WorkoutPlanner') {
               iconName = focused ? 'reader-outline' : 'reader';
+            } else if (route.name === 'Camera') {
+              iconName = focused ? 'camera-outline' : 'camera';
             }
 
             // You can return any component that you like here!
@@ -37,6 +40,7 @@ export default function App(): React.ReactElement {
         <Tab.Screen name="Overview" component={Overview} />
         {/* <Tab.Screen name="Onboarding" component={Onboarding} /> */}
         <Tab.Screen name="WorkoutPlanner" component={WorkoutPlanner} options={{ tabBarLabel: 'Plan workout' }} />
+        <Tab.Screen name="Camera" component={Camera} options={{ tabBarLabel: 'Scan QR' }} />
       </Tab.Navigator>
     </NavigationContainer>
   );

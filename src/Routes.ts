@@ -12,4 +12,5 @@ export type Routes = {
   WorkoutPlanner: undefined;
   Workout: undefined;
   Onboarding: undefined;
+  Camera: undefined;
 };

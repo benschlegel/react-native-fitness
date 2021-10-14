@@ -2,14 +2,15 @@ import React, { useCallback } from 'react';
 import { Dimensions, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Stack } from '../../App';
+import type { Routes, StackNavigationProps } from '../Routes';
 
 const { width } = Dimensions.get('window');
 const BUTTON_HEIGHT = 55;
 
-const Overview = (): React.ReactElement => {
+const Overview = ({ navigation }: StackNavigationProps<Routes, 'Overview'>): React.ReactElement => {
   const navigateToPlanner = useCallback(() => {
-    console.log('navigateToPlanner');
-  }, []);
+    navigation.navigate('WorkoutPlanner');
+  }, [navigation]);
 
   return (
     <SafeAreaView style={styles.container}>

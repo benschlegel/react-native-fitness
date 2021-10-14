@@ -19,7 +19,7 @@ export default function App(): React.ReactElement {
         initialRouteName={'Overview'}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            let iconName = 'asd';
+            let iconName = '';
 
             if (route.name === 'Overview') {
               iconName = focused ? 'fitness-outline' : 'fitness';
@@ -27,9 +27,11 @@ export default function App(): React.ReactElement {
               iconName = focused ? 'reader-outline' : 'reader';
             } else if (route.name === 'Camera') {
               iconName = focused ? 'camera-outline' : 'camera';
+            } else {
+              //if no icon specified, default to planet
+              iconName = focused ? 'planet-outline' : 'planet';
             }
 
-            // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
           // TODO: change colors to match scheme
